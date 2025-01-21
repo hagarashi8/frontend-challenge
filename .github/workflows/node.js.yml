@@ -23,11 +23,12 @@ jobs:
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
-      env:
-        VITE_CAT_KEY: ${{ secrets.CAT_API }}
+
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+      env:
+        VITE_CAT_KEY: ${{ secrets.CAT_API }}
     - run: npm ci
     - run: npm run build --if-present
     - name: Upload static files as artifact
