@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "ofetch": "^1.4.1",
+    "vite-plugin-dts": "^4.5.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
