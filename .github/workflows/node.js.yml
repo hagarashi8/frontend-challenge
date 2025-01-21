@@ -24,7 +24,7 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       env:
-        VITE_CAT_API: ${{ secrets.CAT_API }}
+        VITE_CAT_KEY: ${{ secrets.CAT_API }}
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
